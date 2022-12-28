@@ -190,7 +190,6 @@ public abstract class AbstractHandle implements Handle, FigureListener {
     }
 
     protected void drawRectangle(Graphics2D g, Color fill, Color stroke) {
-        System.out.println("rectangle 3 ");
         if (fill != null) {
             Rectangle r = getBounds();
             g.setColor(fill);
