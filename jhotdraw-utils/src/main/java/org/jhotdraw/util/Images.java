@@ -27,7 +27,6 @@ public class Images {
     private Images() {
     }
 
-    @FeatureEntryPoint(value = "Rectangle draw")
     public static Image createImage(Class<?> baseClass, String resourceName) {
         System.out.println("image");
         URL resource = baseClass.getResource(resourceName);
