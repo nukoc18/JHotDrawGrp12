@@ -10,15 +10,14 @@ import org.jhotdraw.util.ResourceBundleUtil;
 import javax.swing.undo.AbstractUndoableEdit;
 import javax.swing.undo.CannotRedoException;
 import javax.swing.undo.CannotUndoException;
-import java.awt.event.ActionEvent;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.Objects;
 
 public abstract class ArrangeAction extends AbstractSelectedAction {
 
     public String direction;
     public String ID;
-    public ArrangeAction arrangeAction;
 
     /**
      * Creates an action which acts on the selected figures on the current view
@@ -30,6 +29,7 @@ public abstract class ArrangeAction extends AbstractSelectedAction {
         super(editor);
         this.direction = direction;
         this.ID = ID;
+
         ResourceBundleUtil labels
                 = ResourceBundleUtil.getBundle("org.jhotdraw.draw.Labels");
         labels.configureAction(this, this.ID);
@@ -68,7 +68,7 @@ public abstract class ArrangeAction extends AbstractSelectedAction {
 
     public void arrange(DrawingView view, Collection<Figure> figures) {
         Drawing drawing = view.getDrawing();
-        if(this.direction == "back"){
+        if(Objects.equals(this.direction, "back")){
             for (Figure figure : figures) { // XXX Shouldn't the figures be sorted here back to front?
                 drawing.sendToBack(figure);
             }
@@ -78,6 +78,4 @@ public abstract class ArrangeAction extends AbstractSelectedAction {
             }
         }
     }
-
-
 }
