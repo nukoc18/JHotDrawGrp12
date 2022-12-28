@@ -7,3 +7,4 @@ target
 nb-configuration.xml
 *.*~
 /jhotdraw-samples/jhotdraw-samples-misc/nbproject/
+*.ftf
