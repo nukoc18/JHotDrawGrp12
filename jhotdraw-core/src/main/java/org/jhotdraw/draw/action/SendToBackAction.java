@@ -7,9 +7,7 @@
  */
 package org.jhotdraw.draw.action;
 
-import dk.sdu.mmmi.featuretracer.lib.FeatureEntryPoint;
 import org.jhotdraw.draw.*;
-
 
 /**
  * SendToBackAction.
