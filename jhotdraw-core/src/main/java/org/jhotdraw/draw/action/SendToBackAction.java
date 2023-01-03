@@ -7,7 +7,7 @@
  */
 package org.jhotdraw.draw.action;
 
-import org.jhotdraw.draw.*;
+import org.jhotdraw.draw.DrawingEditor;
 
 /**
  * SendToBackAction.

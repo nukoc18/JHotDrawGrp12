@@ -68,7 +68,7 @@ public abstract class ArrangeAction extends AbstractSelectedAction {
 
     public void arrange(DrawingView view, Collection<Figure> figures) {
         Drawing drawing = view.getDrawing();
-        if(Objects.equals(this.direction, "back")){
+        if (Objects.equals(this.direction, "back")){
             for (Figure figure : figures) { // XXX Shouldn't the figures be sorted here back to front?
                 drawing.sendToBack(figure);
             }
